@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor-productos .card {
+  width: 18rem;
+}
+.contenedor-productos .card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #ffccdd;
+  transition: width 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.navbar-nav .nav-link:hover {
+  color: #ffccdd;
+}
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.contenedor-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contenedor-productos .card {
+  width: 18rem;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.contenedor-productos .card:hover {
+  transform: scale(1.05);
+}
+.contenedor-productos .card .card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.contenedor-productos .card .card-body {
+  padding: 1rem;
+  text-align: center;
+}
+.contenedor-productos .card .card-body .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.contenedor-productos .card .card-body .card-text {
+  font-size: 0.9rem;
+}
+.contenedor-productos .card .card-body .btn {
+  margin-top: 10px;
+}
+
+.contenedor-descuentos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.imagen-descuento {
+  width: 300px;
+  height: auto;
+  margin-bottom: 10px;
+}
+.imagen-descuento img {
+  width: 100%;
+  height: auto;
+}
+
+.categoria-productos {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: auto;
+  gap: 10%;
+  margin-bottom: 80px;
+  align-items: center;
+}
+.categoria-productos .card {
+  width: auto;
+}
+.categoria-productos .card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+}
+
+.banner {
+  background-image: url(../imagenes/banner-pedido.png);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  margin-bottom: 10px;
+}
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.producto {
+  width: calc(25% - 20px);
+  margin-bottom: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.producto label,
+.producto input,
+.producto p {
+  margin-bottom: 5px;
+}
+
+.precio {
+  font-weight: bold;
+}
+
+.ubicacion {
+  text-align: center;
+}
+
+.mapa {
+  margin-top: 20px;
+}
+
+.btn-wpp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.btn-wpp img {
+  width: 30px;
+  height: 30px;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 10%;
+}
+footer .logo-link {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+footer .logo {
+  max-width: 100%;
+  height: auto;
+  max-height: 50px;
+}
+footer .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+footer .footer-sections {
+  flex: 1 1 50%;
+  margin-right: 20px;
+  text-align: left;
+}
+footer .footer-sections strong {
+  display: block;
+  margin-bottom: 10px;
+}
+footer .footer-sections nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+footer .footer-sections nav ul li {
+  margin-bottom: 5px;
+}
+footer .footer-sections nav ul a {
+  color: white;
+  text-decoration: none;
+}
+footer .footer-social {
+  flex: 1 1 50%;
+  text-align: left;
+}
+footer .footer-social p {
+  margin-bottom: 10px;
+}
+footer .footer-social .redes-sociales {
+  display: flex;
+  justify-content: center;
+}
+footer .footer-social .redes-sociales .red-social {
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+}
+footer .footer-social .redes-sociales .red-social img {
+  max-width: 30px;
+  height: auto;
+}
+
+form {
+  background-color: beige;
+  padding: 20px;
+  border-radius: 10px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+input[type=email] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+input[type=submit] {
+  background-color: #d2b48c;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #b8860b;
+}
+
+.contenedor-equipo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenido-texto {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.contenido-imagen {
+  flex: 1;
+  text-align: center;
+}
+.contenido-imagen img {
+  height: 300px;
+}
+
+h2 {
+  text-align: center;
+  position: relative;
+  padding: 10px 0;
+  margin: 10% 0;
+}
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffd8d8;
+}
+
+p {
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.centrar-texto {
+  text-align: center;
+}
+
+.leer-izquierda {
+  text-align: left;
+}
+
+.videoproduccion {
+  display: flex;
+  text-align: center;
+  margin: auto;
+  width: 70%;
+  height: 60vh;
+  margin-bottom: 10%;
+}
+
+iframe {
+  width: 100%;
+}
+
+.contenedor-equipo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contenedor-equipo .contenido-imagen {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+}
+.contenedor-equipo .contenido-imagen img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.contenedor-equipo .contenido-texto {
+  flex: 0 0 50%;
+  text-align: center;
+}
+
+#carouselExampleCaptions {
+  height: 400px;
+}
+
+#carouselExampleCaptions .carousel-item img {
+  object-fit: cover;
+  height: 400px;
+}
+
+/*# sourceMappingURL=estilos.css.map */

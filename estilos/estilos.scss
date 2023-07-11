@@ -1,0 +1,427 @@
+$color_1: #fff;
+$background-color_1: bisque;
+$background-color_2: #25d366;
+$background-color_3: rgb(87, 87, 87);
+$background-color_4: beige;
+$background-color_5: #d2b48c;
+$background-color_6: #b8860b;
+$fondo-color:#fffec5;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+//inicio
+.contenedor-productos {
+  .card {
+    width: 18rem;
+    
+    .card-img-top {
+      height: 200px; 
+      object-fit: cover; 
+    }
+  }
+}
+
+
+//menunavegacion
+.navbar-nav {
+	.nav-link {
+	  position: relative;
+	  color: black;
+	  font-weight: bold;
+	  transition: color 0.3s;
+  
+	  &::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -2px;
+		width: 0;
+		height: 2px;
+		background-color: #ffccdd;
+		transition: width 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+	  }
+  
+	  &:hover {
+		color: #ffccdd; 
+  
+		&::after {
+		  width: 100%;
+		}
+	  }
+	}
+  }
+
+  .contenedor-productos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;  
+	.card {
+	  width: 18rem;
+	  margin-bottom: 20px;
+	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	  transition: transform 0.3s ease;
+  
+	  &:hover {
+		transform: scale(1.05);
+	  }
+  
+	  .card-img-top {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+	  }
+  
+	  .card-body {
+		padding: 1rem;
+		text-align: center;
+  
+		.card-title {
+		  font-size: 1.2rem;
+		  font-weight: bold;
+		}
+  
+		.card-text {
+		  font-size: 0.9rem;
+		}
+  
+		.btn {
+		  margin-top: 10px;
+		}
+	  }
+	}
+  }
+  
+.contenedor-descuentos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.imagen-descuento {
+	width: 300px;
+	height: auto;
+	margin-bottom: 10px;
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+//catalogo
+.categoria-productos {
+	width: 90%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+	grid-template-rows: auto;
+	gap: 10%;
+	margin-bottom: 80px;
+	align-items: center; 
+	.card {
+	  width: auto; 
+	  img {
+		width: 100%;
+		height: auto;
+		max-height: 200px; 
+	  }
+	}
+  }
+//pedidos
+.banner {
+	background-image: url(../imagenes/banner-pedido.png);
+	background-size: cover;
+	background-position: center;
+	height: 400px;
+	margin-bottom: 10px;
+}
+.productos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  }
+  
+  .producto {
+	width: calc(25% - 20px);
+	margin-bottom: 20px;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+  }
+  
+  .producto img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+  }
+  
+  .producto label,
+  .producto input,
+  .producto p {
+	margin-bottom: 5px;
+  }
+  
+  .precio {
+	font-weight: bold;
+  }
+
+  .ubicacion {
+	text-align: center;
+  }
+  
+  .mapa {
+	margin-top: 20px;
+  }
+  
+
+  
+//botonwpp
+.btn-wpp {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 60px;
+	height: 60px;
+	background-color: $background-color_2;
+	border-radius: 50%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	img {
+		width: 30px;
+		height: 30px;
+	}
+}
+//logo
+.logo {
+	width: 100px;
+	height: auto;
+}
+
+//footer
+footer {
+	background-color: black;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	margin-top: 10%;
+	
+  
+	.logo-link {
+	  display: inline-block;
+	  margin-bottom: 10px;
+	}
+  
+	.logo {
+	  max-width: 100%;
+	  height: auto;
+	  max-height: 50px;
+	}
+  
+	.footer-content {
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	}
+  
+	.footer-sections {
+	  flex: 1 1 50%;
+	  margin-right: 20px;
+	  text-align: left;
+  
+	  strong {
+		display: block;
+		margin-bottom: 10px;
+	  }
+  
+	  nav ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+  
+		li {
+		  margin-bottom: 5px;
+		}
+  
+		a {
+		  color: white;
+		  text-decoration: none;
+		}
+	  }
+	}
+  
+	.footer-social {
+	  flex: 1 1 50%;
+	  text-align: left;
+  
+	  p {
+		margin-bottom: 10px;
+	  }
+  
+	  .redes-sociales {
+		display: flex;
+		justify-content: center;
+  
+		.red-social {
+		  display: flex;
+		  align-items: center;
+		  margin: 0 5px;
+  
+		  img {
+			max-width: 30px;
+			height: auto;
+		  }
+		}
+	  }
+	}
+  }
+  
+//contacto
+form {
+	background-color: $background-color_4;
+	padding: 20px;
+	border-radius: 10px;
+	margin-right: 10%;
+	margin-left: 10%;
+}
+label {
+	display: block;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+input[type="text"] {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+input[type="email"] {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+input[type="submit"] {
+	background-color: $background-color_5;
+	color: $color_1;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	&:hover {
+		background-color: $background-color_6;
+	}
+}
+.contenedor-equipo {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.contenido-texto {
+	flex: 1;
+	padding-right: 20px;
+}
+.contenido-imagen {
+	flex: 1;
+	text-align: center;
+	img {
+		height: 300px;
+	}
+}
+//h2
+h2 {
+	text-align: center;
+	position: relative;
+	padding: 10px 0;
+	margin: 10% 0;
+  
+	&::after {
+	  content: "";
+	  position: absolute;
+	  bottom: -5px;
+	  left: 0;
+	  width: 100%;
+	  height: 2px;
+	  background-color: #ffd8d8; 
+	}
+  }
+  
+//parafos
+p
+{
+	text-align: center;
+	margin-left: 5%;
+    margin-right: 5%;
+}
+//nosotros
+.centrar-texto {
+	text-align: center;
+  }
+  
+  .leer-izquierda {
+	text-align: left;
+  }
+  
+  .videoproduccion {
+	display: flex;
+	text-align: center;
+	margin: auto;
+	width: 70%; 
+	height: 60vh; 
+	margin-bottom: 10%;
+
+  }
+  iframe{
+	width: 100%;
+
+  }
+ 
+  .contenedor-equipo {
+	display: flex;
+	align-items: center;
+	justify-content: center; 
+  
+	.contenido-imagen {
+	  flex: 0 0 50%; 
+	  display: flex;
+	  justify-content: center;
+  
+	  img {
+		max-width: 100%;
+		max-height: 100%; 
+	  }
+	}
+  
+	.contenido-texto {
+	  flex: 0 0 50%;
+	  text-align: center;
+	}
+  }
+  
+//carrusel
+#carouselExampleCaptions {
+	height: 400px; 
+  }
+  
+  #carouselExampleCaptions .carousel-item img {
+	object-fit: cover;
+	height: 400px;
+  }
+
+
+
+
+
+
